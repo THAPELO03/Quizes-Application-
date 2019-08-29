@@ -1,0 +1,37 @@
+<ion-header style="background-color: #5f026b">
+    
+
+  <ion-toolbar color="primary" style="text-align: center">
+      <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+      <br>
+    <ion-title style="text-align: center"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+         <ion-card-title style="text-align: center">Please login</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-item>
+                <ion-input [(ngModel)]="email" placeholder="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input [(ngModel)]="password" placeholder="password"></ion-input>
+              </ion-item>
+              <br>
+
+              <!----<ion-button style="margin-left: 45%" (click)="login()" [routerLink]="'/categories'" color="primary">LOGIN</ion-button>-->
+
+              <ion-button style="margin-left: 20%" (click)="login()" routerLink='/home' color="primary">LOGIN</ion-button>
+              
+
+              <ion-button  routerLink='/register'>REGISTER</ion-button>
+              <br>
+              <a (click)="resetPassword()"  color="primary">forgot password?</a>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

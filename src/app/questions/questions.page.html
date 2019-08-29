@@ -1,0 +1,79 @@
+<ion-header style="background-color: #5f026b">
+    <a style="color:aqua" routerLink='/profile'>Profile</a>
+  <ion-toolbar  color="primary" >
+    <div style="text-align: center">
+      <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+      <br>
+      <h1 style="text-align: center;font-family: Castellar" >   Please choose the correct answers..</h1>
+    </div>  
+            
+            
+  
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  
+<ion-card *ngFor="let quiz of Questionz">
+  <h4>{{ quiz.Questions }}</h4>
+    <ion-list >
+      <ion-radio-group (ionChange)="setData($event,quiz)">
+        <ion-item *ngFor="let AN of quiz.Answer">
+          <ion-label>{{ AN }}</ion-label>
+          <ion-radio slot="start" value="{{AN}}"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+</ion-card>
+
+<div style="text-align: center">
+  <ion-button  [routerLink]="['/scores']" (click)="submit()">SUBMIT</ion-button>
+</div>
+
+<!---<ion-card *ngFor="let quiz of Questionz">
+  <ion-card-content>
+  <ion-card-header>
+    <ion-card-title>
+      <b> {{ quiz.key }} </b>
+    </ion-card-title>
+  </ion-card-header>
+  ----<ion-card-content *ngFor="let quizzy of Answers">
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label></ion-label>
+        </ion-list-header>
+        --Question 1
+        <ion-item>
+          <ion-label>{{ quiz.Option[0] }}</ion-label>
+          <ion-radio slot="start"  selected></ion-radio>
+        </ion-item>
+        --Question 2
+        <ion-item>
+          <ion-label>{{ quiz.Option[1] }}</ion-label>
+          <ion-radio slot="start"  selected></ion-radio>
+        </ion-item>
+        --Question 3
+        <ion-item>
+          <ion-label>{{ quiz.Option[2] }}</ion-label>
+          <ion-radio slot="start"  selected></ion-radio>
+        </ion-item>
+        --Question 4--
+        <ion-item>
+          <ion-label>{{ quiz.Option[3] }}</ion-label>
+          <ion-radio slot="start"  selected></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+<ion-item *ngFor = "let lists of Question">
+  <ion-button routerLink='/questions'>{{lists.cat_001}}</ion-button>
+</ion-item>-->
+
+</ion-content>

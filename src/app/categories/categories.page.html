@@ -1,0 +1,32 @@
+<ion-header style="background-color: #5f026b">
+    <a style="color:aqua" routerLink='/profile'>Profile</a>
+  <ion-toolbar  color="primary" style="text-align: center">
+      <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+      <br>
+      
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5 style="text-align: center">Please choose your topic of choice for quizes to test your general knowledge..</h5>
+
+  
+  <div class="ion-padding" *ngFor = "let list of Category">
+    <ion-card [routerLink] = "['/questions']" (click) = "setID(list)">
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title><b>{{list.categories}}</b></ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>    
+
+
+
+
+              <!---<ion-item *ngFor = "let list of Cat">
+                  
+                <ion-button routerLink='/questions'>{{list.catName}}</ion-button>
+                  <ion-button (click)="getMacat()">play</ion-button>
+              </ion-item>-->
+       
+</ion-content>

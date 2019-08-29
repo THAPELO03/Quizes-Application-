@@ -1,14 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header style="background-color: #5f026b">
+   
+    <a style="color:aqua" routerLink='/profile'>Profile</a>
+
+  <ion-toolbar color="primary"> 
+    <ion-title style="text-align: center">
+      <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+      <br>
+      
+      </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+<div style="text-align: center">
+   
+<br>
+<h6>Please click the button below to choose from various topics of your quiz choice..</h6>
+<br>
+<br>
+<ion-button   [routerLink]="'/categories'" color="primary">categories</ion-button>
+</div>
+
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    
+  
+  <!----ion-button (click)="logout()" color="warning">LOG-out</ion-button>-->
+</div>
 </ion-content>

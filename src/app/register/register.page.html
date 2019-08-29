@@ -1,0 +1,62 @@
+<ion-header style="background-color: #5f026b"><a  style="color:aqua;margin-left: 1%" routerLink='/home'> Goto home</a> |
+              <a style="color:aqua;"> Gallery</a>
+  <ion-toolbar color="primary" style="text-align: center">
+    <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+    <br>
+    <ion-title style="text-align: center" > Fun Quiz!!<img src=""></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+         <ion-card-title style="text-align: center">Please put your details to register..</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+        
+                <ion-item>
+                   <ion-input  placeholder="Name" [(ngModel)]="name" ></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-input  placeholder="Age" [(ngModel)]="age" ></ion-input>
+               </ion-item>
+
+               <ion-list>
+                <ion-radio-group  (ionChange) = "setGender($event)">
+                  <ion-list-header>
+                    <ion-label>Gender</ion-label>
+                  </ion-list-header>
+              
+                  <ion-item>
+                    <ion-label>Male</ion-label>
+                    <ion-radio slot="start" value="Male" checked></ion-radio>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label>Female</ion-label>
+                    <ion-radio slot="start" value="Female"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-list>
+
+            
+              <ion-item>
+                 <ion-input  placeholder="Email" [(ngModel)]="email" ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                 <ion-input  placeholder="Password" [(ngModel)]="password" ></ion-input>
+              </ion-item>
+              
+              <br>
+
+              <ion-button (click)="register()"  style="margin-left: 48%"   color="primary">submit</ion-button>
+              
+             
+        </ion-card-content>
+      </ion-card>
+</ion-content>
+

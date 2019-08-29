@@ -1,0 +1,42 @@
+<ion-header>
+    <a style="color:aqua" routerLink='/home'>Homw</a>
+  <ion-toolbar color="primary" style="text-align: center">
+    <img width="150" height="75" style="border-radius: 50%;text-align: center" src="assets\icon\images (2).jpeg">
+    <br>
+  <ion-title style="text-align: center"></ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<img [src]="currentImage" *ngIf="currentImage">
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Profile Picture</ion-card-subtitle>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center">
+      <ion-button (click)="profilePic()">
+        <ion-icon slot="icon-only" name="camera" ></ion-icon>
+      </ion-button>
+      </div>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+    <ion-item>
+      <ion-input [(ngModel)]="name" placeholder="name"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [(ngModel)]="about" placeholder="about"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-input [(ngModel)]="contact" placeholder="contacts"></ion-input>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
